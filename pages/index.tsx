@@ -24,13 +24,13 @@ export default function Home() {
   ) => {
     setLoading(true);
 
-    console.log(process.env.NEXT_PUBLIC_OPENAI_API_KEY);
+    console.log(process.env.NEXT_PUBLIC_OPENAI_APIKEY);
     const inputWithQuotes = "\"" + input + "\""
     const requestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+        Authorization: "Bearer " + process.env.NEXT_PUBLIC_OPENAI_APIKEY,
       },
       body: JSON.stringify({
         model: "text-davinci-edit-001",
