@@ -24,7 +24,6 @@ export default function Home() {
   ) => {
     setLoading(true);
 
-    console.log(process.env.NEXT_PUBLIC_OPENAI_APIKEY);
     const inputWithQuotes = "\"" + input + "\""
     const requestOptions = {
       method: "POST",
