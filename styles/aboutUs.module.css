@@ -1,0 +1,75 @@
+
+.header {
+    display: inline-flex;
+    color: mintcream;
+}
+
+.indent {
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.card {
+    top: 10px;
+    width: 98%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* display: flex; */
+    font-size: 2.0em;
+    color: mintcream;
+    cursor: pointer;
+    background-color: black;
+}
+
+/* .card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+
+.card:hover:before,
+.card:hover:after {
+  animation: none;
+  opacity: 0;
+} */
+
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #ff3cf5, #eefe00 43%, #24bffe);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.resize {
+    width: 800px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
